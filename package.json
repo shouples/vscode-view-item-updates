@@ -1,11 +1,11 @@
 {
-  "name": "vscode-extension-template",
-  "displayName": "vscode-extension-template",
+  "name": "vscode-view-item-updates",
+  "displayName": "vscode-view-item-updates",
   "description": "",
   "publisher": "shouples-dev",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shouples/vscode-extension-template.git"
+    "url": "https://github.com/shouples/vscode-view-item-updates.git"
   },
   "version": "0.0.1",
   "engines": {
@@ -17,7 +17,40 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": []
+    "commands": [
+      {
+        "command": "viewItemUpdates.triggerLoading",
+        "title": "Load Items",
+        "icon": "$(sync)",
+        "category": "View Item Updates"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "viewItemUpdates",
+          "title": "View Item Updates",
+          "icon": "$(list-tree)"
+        }
+      ]
+    },
+    "views": {
+      "viewItemUpdates": [
+        {
+          "id": "viewItemUpdates.viewItems",
+          "name": "View Item Updates"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "viewItemUpdates.triggerLoading",
+          "when": "view == viewItemUpdates.viewItems",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

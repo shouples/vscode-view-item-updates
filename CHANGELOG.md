@@ -1,6 +1,6 @@
 # Change Log
 
-All notable changes to the "vscode-extension-template" extension will be documented in this file.
+All notable changes to the "vscode-view-item-updates" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this
 file.
