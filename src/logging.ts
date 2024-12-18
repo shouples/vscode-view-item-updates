@@ -1,6 +1,6 @@
 import { LogOutputChannel, window } from "vscode";
 
-export const OUTPUT_CHANNEL: LogOutputChannel = window.createOutputChannel("Extension-Template", {
+export const OUTPUT_CHANNEL: LogOutputChannel = window.createOutputChannel("View Item Updates", {
   log: true,
 });
 
